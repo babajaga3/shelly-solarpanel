@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "tsx app.ts",
-    "test": "tsx ./jobs/processData.ts"
+    "test": "tsx utils/processData.ts"
   },
   "keywords": [],
   "author": "",
