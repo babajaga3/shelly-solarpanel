@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 const today = new Date().toISOString().split('T')[0];
 
-export async function saveJSON(data: object) {
+export async function saveJson(data: object) {
   // Fetch or create json directory
   const pathToFile = resolve('./json');
   if (!existsSync(pathToFile)) {

@@ -1,6 +1,6 @@
-import { downloadCSV } from "../utils/downloadCSV";
-import { convertCSV } from "../utils/convertCSV";
-import { saveJSON } from "../utils/saveJSON";
+import { downloadCsv } from "../utils/downloadCsv";
+import { convertCsv } from "../utils/convertCsv";
+import { saveJson } from "../utils/saveJson";
 import * as fs from "fs";
 import { CsvRecord } from "../types";
 
@@ -9,7 +9,7 @@ let commandArray: number[] = [];
 
 // Download CSV file with data if it does not exist
 if (!fs.existsSync(`./downloads/DAM Result for_ ${today}.csv`)) {
-  await downloadCSV();
+  await downloadCsv();
 }
 
 /**
@@ -18,7 +18,7 @@ if (!fs.existsSync(`./downloads/DAM Result for_ ${today}.csv`)) {
  * push the command number to the commandArray based on the 'Price (BGN)'
  * 0 - Off; 1 - On
 */
-await convertCSV(`./downloads/DAM Result for_ ${today}.csv`).then((data: CsvRecord[]) => {
+await convertCsv(`./downloads/DAM Result for_ ${today}.csv`).then((data: CsvRecord[]) => {
   data.forEach((entry) => {
     if (parseFloat(entry["Price (BGN)"]) < 7) {
       commandArray.push(0);
@@ -29,4 +29,4 @@ await convertCSV(`./downloads/DAM Result for_ ${today}.csv`).then((data: CsvReco
 });
 
 // Save data as JSON file
-await saveJSON(commandArray);
+await saveJson(commandArray);

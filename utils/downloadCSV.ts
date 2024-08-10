@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 
-export async function downloadCSV() {
+export async function downloadCsv() {
   // Fetch or create download directory
   const downloadPath = path.resolve('./downloads');
   if (!fs.existsSync(downloadPath)) {

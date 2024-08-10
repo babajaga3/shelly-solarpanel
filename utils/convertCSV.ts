@@ -2,7 +2,7 @@ import * as fs from "fs";
 import { parse } from "csv-parse";
 
 // Converts CSV file to array of objects
-export async function convertCSV(pathToFile: fs.PathLike) {
+export async function convertCsv(pathToFile: fs.PathLike) {
   // Check if file exists
   if (!fs.existsSync(pathToFile)) {
     console.error("File does not exist");
