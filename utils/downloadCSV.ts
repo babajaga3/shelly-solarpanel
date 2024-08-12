@@ -39,6 +39,7 @@ export async function downloadCsv() {
   console.log('Clicked the button');
 
   // Wait for the download to complete
+  // TODO - Replace this with a more reliable method
   await new Promise(r => setTimeout(r, 5000));
 
   // Close the browser
