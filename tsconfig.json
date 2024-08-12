@@ -4,7 +4,8 @@
     "moduleResolution": "Bundler",
     "outDir": "./dist",
     "allowJs": true,
-    "target": "ESNext"
+    "target": "ESNext",
+    "esModuleInterop": true
   },
   "include": ["./**/*"]
 }
