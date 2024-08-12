@@ -12,11 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bree": "^9.2.3",
+    "@breejs/ts-worker": "^2.0.0",
+    "bree": "^9.2.4",
     "csv-parse": "^5.5.6",
-    "puppeteer": "^22.10.0"
+    "puppeteer": "^22.15.0"
   },
   "devDependencies": {
-    "tsx": "^4.11.2"
+    "tsx": "^4.17.0"
   }
 }
